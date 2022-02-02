@@ -1,0 +1,28 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /codestore
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/codestore
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+
+appEnv:
+  jwt:
+    jwtSecret: codestoreSecretKey
+    jwtExpirationMs: 86400000
