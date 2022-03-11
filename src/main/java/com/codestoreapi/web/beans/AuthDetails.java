@@ -1,7 +1,6 @@
 package com.codestoreapi.web.beans;
 
 import com.codestoreapi.core.models.User;
-import com.codestoreapi.utils.enums.UserTypeEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

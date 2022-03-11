@@ -45,6 +45,7 @@ public class AuthController {
 
     @PostMapping("/sign-out")
     public @ResponseBody ResponseEntity<?> signOut() {
+        log.info(System.getProperty("user.dir"));
         authService.signOut();
         return new ResponseEntity("Signed Out Sucessfully", HttpStatus.OK);
     }

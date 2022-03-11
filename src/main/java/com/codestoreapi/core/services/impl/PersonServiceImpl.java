@@ -7,6 +7,7 @@ import com.codestoreapi.vo.PersonVO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,5 +53,10 @@ public class PersonServiceImpl implements PersonService {
     public Optional<Long> delete(Long id) {
         personRepository.deleteById(id);
         return Optional.of(id);
+    }
+
+    @Override
+    public Boolean uploadImage(MultipartFile image) {
+        return null;
     }
 }
